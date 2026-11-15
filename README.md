@@ -1,2 +1,73 @@
-# fake-news-detection-ml
-A machine learning-based fake news detection web application built using Python, Flask, TF-IDF vectorization and the Passive-Aggressive Classifier to classify news articles as Fake or Real.
+# Fake News Detection Using Machine Learning 📰
+
+## Project Overview
+Fake News Detection is a machine learning-based web application that identifies whether a given news article is **FAKE** or **REAL**.
+
+The application uses Natural Language Processing (NLP) and a Passive Aggressive Classifier to analyse news text and predict its authenticity.
+
+## Technologies Used
+- Python
+- Flask
+- Machine Learning
+- Natural Language Processing (NLP)
+- Scikit-learn
+- Pandas
+- NumPy
+- HTML and CSS
+
+## Machine Learning Algorithm
+- TF-IDF Vectorization
+- Passive Aggressive Classifier
+- Train-Test Split
+
+## Features
+- User-friendly web interface
+- News text input for prediction
+- Automatic fake or real news classification
+- Machine learning-based prediction
+
+## Model Performance
+The project explores multiple classification algorithms, including:
+- Passive Aggressive Classifier
+- Decision Tree Classifier
+
+## Project Structure
+```text
+Fake-News-Detection/
+│
+├── main.py
+├── model.pkl
+├── templates/
+├── static/
+└── README.md
+```
+
+## How to Run the Project
+
+1. Clone this repository:
+   ```bash
+   git clone YOUR_GITHUB_REPOSITORY_URL
+   ```
+
+2. Navigate to the project folder:
+   ```bash
+   cd fake-news-detection-ml
+   ```
+
+3. Install the required libraries:
+   ```bash
+   pip install flask scikit-learn pandas numpy
+   ```
+
+4. Run the application:
+   ```bash
+   python main.py
+   ```
+
+5. Open the local URL displayed in the terminal in your browser.
+
+## Dataset
+The project was trained using a news dataset containing real and fake news articles. The dataset is not included in this repository due to its file size.
+
+## Author
+Himavathi YS
