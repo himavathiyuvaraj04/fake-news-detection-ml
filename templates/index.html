@@ -11,6 +11,66 @@
 
 </head>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fake News Detection System</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='news1.jpeg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+    <div class="login">
+
+        <h1 style="color: black;">Fake News 📰 Detector</h1>
+
+        <form action="{{ url_for('predict') }}" method="POST">
+
+            <textarea
+                name="message"
+                rows="6"
+                cols="50"
+                required
+                placeholder="Enter news article here..."
+                style="font-size: 18pt;"
+            ></textarea>
+
+            <br><br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">
+                Predict
+            </button>
+
+            <div class="results">
+
+                {% if prediction is defined %}
+                    {% if prediction[0] == 'FAKE' %}
+                        <h2 style="color: red;">Looking like Fake News ⚠️</h2>
+
+                    {% elif prediction[0] == 'REAL' %}
+                        <h2 style="color: green;">Looking like Real News 📰</h2>
+
+                    {% endif %}
+                {% endif %}
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+
 <body style="background-image: url(static/news1.jpeg); background-size: cover; width: 30%; height: 30%;">
  <div class="login">
 	<h1 style="color: black;">Fake News📰  Detector</h1>
