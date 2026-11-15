@@ -74,13 +74,12 @@ The application uses the pre-trained model (`model.pkl`) and saved TF-IDF vector
 
 ## Installation
 
-Install the required libraries:
+git clone https://github.com/himavathiyuvaraj04/fake-news-detection-ml.git
 
-pip install flask scikit-learn
+cd fake-news-detection-ml
 
-Run the application:
+pip install -r requirements.txt
 
 python main.py
-
 ## Author
 Himavathi YS
