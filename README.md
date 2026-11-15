@@ -67,7 +67,20 @@ Fake-News-Detection/
 5. Open the local URL displayed in the terminal in your browser.
 
 ## Dataset
-The project was trained using a news dataset containing real and fake news articles. The dataset is not included in this repository due to its file size.
+
+The original news dataset (`news.csv`) is not included because of its file size.
+
+The application uses the pre-trained model (`model.pkl`) and saved TF-IDF vectorizer (`vectorizer.pkl`) to make predictions without requiring the original dataset at runtime.
+
+## Installation
+
+Install the required libraries:
+
+pip install flask scikit-learn
+
+Run the application:
+
+python main.py
 
 ## Author
 Himavathi YS
